@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Anime Love</title>
+		<link rel="stylesheet" href="./static/css/style-login.css" />
+	</head>
+	<body>
+		<body style="font-family: Arial, Helvetica, sans-serif;">
+			<form class="transparent">
+				<div class="form-inner">
+					<h3 id="change">Зарегистрируйтесь и смотрите аниме бесплатно!</h3> <hr> <br/>
+					<label for="username">Имя пользователя</label>
+					<input type="text" id="username">
+					<label for="password">Пароль</label>
+					<input id="password" type="password">
+					<input type="checkbox" id="custom-checkbox">
+					<label for="custom-checkbox">Запомнить меня</label>
+					<input type="submit" id="vhod" value="Войти">
+				</div>
+			</form>
+			<div class="pustota"></div> 
+			 
+			<script>
+
+				let textElement = document.getElementById('change');
+				textElement.addEventListener('click', function() {
+					textElement.style.color = getRandomColor();
+				});
+
+				function getRandomColor() {
+  					let letters = '0123456789ABCDEF';
+  					let color = '#';
+  					for (let i = 0; i < 6; i++) {
+    					color += letters[Math.floor(Math.random() * 16)];
+  					}
+  					return color;
+				}
+			</script>	
+
+	</body>
+</html>
